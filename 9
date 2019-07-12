@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char text[20], reverse_text[20];
+int i,n, length = 0;
+printf("Enter text: ");
+gets(text);
+for (i = 0; text[i] != '\0'; i++)
+{
+length++; //this will calculate the length of given text
+}
+//Reverse the original text and store into reverse_text
+for (i = length - 1; i >= 0; i--)
+{
+reverse_text[length - i - 1] = text[i];
+}
+//Check whether reverse_text is same to original text
+for (n = 1, i = 0; i < length; i++)
+{
+if (reverse_text[i] != text[i])
+n = 0;
+}
+if (n == 1) 
+printf("%s is a palindrome.", text);
+else
+printf("%s is not a palindrome", text);
+return 0;
+}
+
+
+
+#include <stdio.h> 
+void main()
+{ 
+char sentence[80];
+int i, vowels = 0, special = 0;
+printf("Enter a sentence \n");
+gets(sentence);
+for (i = 0; sentence[i] != '\0'; i++)
+{
+if ((sentence[i] == 'a' || sentence[i] == 'e' || sentence[i] ==
+'i' || sentence[i] == 'o' || sentence[i] == 'u') ||
+(sentence[i] == 'A' || sentence[i] == 'E' || sentence[i] ==
+'I' || sentence[i] == 'O' || sentence[i] == 'U'))
+{
+vowels = vowels + 1;
+}
+if (sentence[i] =='t' ||sentence[i] =='\0' || sentence[i] ==' ')
+{
+special = special + 1;
+}
+}
+printf("No. of vowels in %s = %d\n", sentence, vowels);
+} 

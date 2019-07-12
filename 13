@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main()
+{
+char str[100];
+char *ptr;
+int cntV,cntC;
+printf("Enter any string :: ");
+scanf("%s",str);
+//assign address of str to ptr
+ptr=str; 
+cntV=cntC=0;
+while(*ptr!='\0')
+{
+if(*ptr=='A' ||*ptr=='E' ||*ptr=='I' ||*ptr=='O' ||*ptr=='U' ||*ptr=='a' 
+||*ptr=='e' ||*ptr=='i' ||*ptr=='o' ||*ptr=='u')
+cntV++;
+else
+cntC++;
+//increase the pointer, to point next character
+ptr++;
+}
+printf("\nTotal number of VOWELS :: %d and CONSONANTS :: 
+%d\n\n",cntV,cntC);
+return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+int x, y, *a, *b, temp;
+printf("Enter the value of x and y\n");
+scanf("%d%d", &x, &y);
+printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+a = &x;
+b = &y;
+temp = *b;
+*b = *a;
+*a = temp;
+printf("After Swapping\nx = %d\ny = %d\n", x, y);
+return 0;
+} 

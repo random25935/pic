@@ -1,0 +1,80 @@
+#include<stdio.h>
+ 
+void main()
+{
+    int i, n;
+    float x, sum, t;
+    clrscr();
+     
+    printf(" Enter the value for x : ");
+    scanf("%f",&x);
+     
+    printf(" Enter the value for n : ");
+    scanf("%d",&n);
+     
+    x=x*3.14159/180;
+    t=x;
+    sum=x;
+     
+    /* Loop to calculate the value of Sine */
+    for(i=1;i<=n;i++)
+    {
+        t=(t*(-1)*x*x)/(2*i*(2*i+1));
+        sum=sum+t;
+    }
+     
+    printf(" The value of Sin(%f) = %.4f",x,sum);
+  }
+
+
+
+
+
+#include<stdio.h>
+int main()
+ {
+ 	int i,j,k,n;
+ 	
+ 	printf("Enter no of rows: ");
+ 	scanf("%d", &n);
+ 	
+ 	for (i = 1; i <= n; i++)
+ 	  {
+ 	    for( k = 1; k<=n-i; k++)
+ 	          printf(" ");
+		  
+		  for( j = 1; j <= i; j++)
+		    {
+		     if( i % 2 == 1)
+			    printf("%d ", i); 	
+			 
+			 else
+		        printf("* ");
+	        }
+		 printf("\n");    
+	  }
+ }
+ 
+ 
+ 
+ 
+ 
+     #include<stdio.h>
+
+  int main()
+   {
+ 	int i,j,k,n;
+ 	
+ 	printf("Enter no of rows: ");
+ 	scanf("%d", &n);
+ 	
+ 	for (i = n; i >= 1; --i)
+ 	  {
+ 	     for( j = 1; j <= i; j++)
+		    {
+		       printf("%d ",i);
+	        }
+		 printf("\n");    
+	  }
+   }
+
